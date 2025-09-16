@@ -132,7 +132,7 @@ export default function Countdown() {
       digitalRef.current.appendChild(secondsU);
 
       // Store references for animation
-      (digitalRef.current as any).slots = {
+      (digitalRef.current as HTMLDivElement & { slots: Record<string, HTMLElement> }).slots = {
         daysH, daysT, daysU,
         hoursT, hoursU,
         minutesT, minutesU,
@@ -169,9 +169,10 @@ export default function Countdown() {
 
   // Animate when time changes
   useEffect(() => {
-    if (!digitalRef.current || !(digitalRef.current as any).slots) return;
+    const current = digitalRef.current as HTMLDivElement & { slots?: Record<string, HTMLElement> };
+    if (!current || !current.slots) return;
 
-    const slots = (digitalRef.current as any).slots;
+    const slots = current.slots;
     const prev = prevTimeLeft.current;
 
     // Days

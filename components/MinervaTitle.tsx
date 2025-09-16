@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { animate, stagger } from 'animejs';
+import { animate } from 'animejs';
 
 export default function MinervaTitle() {
   const titleRef = useRef<HTMLDivElement>(null);
@@ -28,14 +28,6 @@ export default function MinervaTitle() {
       });
     }
   }, []);
-
-  const splitText = (text: string) => {
-    return text.split('').map((char, index) => (
-      <span key={index} className="letter inline-block">
-        {char === ' ' ? '\u00A0' : char}
-      </span>
-    ));
-  };
 
   return (
     <div className="text-center">
