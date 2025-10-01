@@ -3,14 +3,14 @@ import "./globals.css"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import Script from "next/script"
-import Plasma from "@/components/plasma"
+import DesertNight from "@/components/desert-night"
 
 const inter = Inter({ subsets: ["latin"], display: "swap" })
 
 export const metadata: Metadata = {
-  title: "Skitbit | 3D Animation Made Simple, Reliable & Scalable",
+  title: "GcMinerva #24809 | FIRST Tech Challenge - Gen 3 Team",
   description:
-    "From product launches to full-scale campaigns, Skitbit delivers 3D animation that's fast, consistent, and built to wow your audience.",
+    "Official website of GcMinerva #24809, a FIRST Tech Challenge Gen 3 robotics team competing in the 2025-2026 DECODE season. Meet our team, sponsors, and follow our journey.",
 }
 
 export default function RootLayout({
@@ -72,16 +72,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body>
-        <div className="fixed inset-0 z-0 bg-black">
-          <Plasma
-            color="#8b5cf6"
-            speed={0.8}
-            direction="forward"
-            scale={1.5}
-            opacity={0.4}
-            mouseInteractive={true}
-          />
-        </div>
+        <DesertNight />
         <div className="relative z-10">{children}</div>
       </body>
     </html>
