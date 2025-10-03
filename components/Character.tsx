@@ -21,6 +21,7 @@ export default function Character() {
               width={400}
               height={300}
               loading="lazy"
+              style={{ borderRadius: '10%' }}
             />
           </Link>
         </li>
@@ -32,6 +33,7 @@ export default function Character() {
               width={400}
               height={300}
               loading="lazy"
+              style={{ borderRadius: '10%' }}
             />
           </Link>
         </li>
@@ -43,6 +45,7 @@ export default function Character() {
               width={400}
               height={300}
               loading="lazy"
+              style={{ borderRadius: '10%' }}
             />
           </Link>
         </li>
@@ -54,6 +57,7 @@ export default function Character() {
               width={400}
               height={300}
               loading="lazy"
+              style={{ borderRadius: '10%' }}
             />
           </Link>
         </li>
