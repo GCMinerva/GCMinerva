@@ -12,12 +12,51 @@ export default function CommunityPage() {
   const scriptsLoaded = useRef(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    document.body.classList.add('preload');
+
+    const preloadTimer = setTimeout(() => {
       document.body.classList.remove('preload');
     }, 300);
 
+    // Animation on scroll
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      document.querySelectorAll('.js-Animation').forEach((element) => {
+        const elementTop = element.getBoundingClientRect().top + scrollTop;
+        if (elementTop < scrollTop + windowHeight * 0.9) {
+          element.classList.add('animated');
+        }
+      });
+
+      document.querySelectorAll('.fade-Animation').forEach((element) => {
+        const elementTop = element.getBoundingClientRect().top + scrollTop;
+        if (elementTop < scrollTop + windowHeight * 0.9) {
+          element.classList.add('animated');
+        }
+      });
+    };
+
+    // Initial check for animations
+    const initAnimations = () => {
+      handleScroll();
+    };
+
+    // Wait for page to be fully loaded
+    const loadTimer = setTimeout(() => {
+      initAnimations();
+    }, 400);
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('load', initAnimations);
+
     return () => {
-      clearTimeout(timer);
+      clearTimeout(preloadTimer);
+      clearTimeout(loadTimer);
+      document.body.classList.remove('preload');
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('load', initAnimations);
       scriptsLoaded.current = false;
     };
   }, []);

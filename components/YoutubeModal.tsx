@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { gsap } from 'gsap';
 
 interface YoutubeModalProps {
@@ -9,63 +9,68 @@ interface YoutubeModalProps {
 }
 
 export default function YoutubeModal({ videoId, onClose }: YoutubeModalProps) {
-  const [isVisible, setIsVisible] = useState(false);
+  const [currentVideoId, setCurrentVideoId] = useState<string | null>(null);
+  const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (videoId) {
-      setIsVisible(true);
-      const modal = document.querySelector('.youtube-Modal');
-      gsap.to(modal, {
-        display: 'block',
-        opacity: 1,
-        duration: 0.3,
-        ease: 'power1.out',
-      });
-    } else {
-      const modal = document.querySelector('.youtube-Modal');
-      gsap.to(modal, {
+      setCurrentVideoId(videoId);
+      if (modalRef.current) {
+        gsap.to(modalRef.current, {
+          display: 'block',
+          opacity: 1,
+          duration: 0.3,
+          ease: 'power1.out',
+        });
+      }
+    } else if (modalRef.current) {
+      gsap.to(modalRef.current, {
         display: 'none',
         opacity: 0,
         duration: 0.3,
         ease: 'power1.out',
+        onComplete: () => {
+          setCurrentVideoId(null);
+        },
       });
-      setIsVisible(false);
     }
   }, [videoId]);
 
   const handleClose = () => {
-    const modal = document.querySelector('.youtube-Modal');
-    const content = document.querySelector('.youtube-Modal_Content');
-
-    gsap.to(modal, {
-      display: 'none',
-      opacity: 0,
-      duration: 0.3,
-      ease: 'power1.out',
-      onComplete: () => {
-        if (content?.firstChild && content.contains(content.firstChild)) {
-          content.removeChild(content.firstChild);
-        }
-        onClose();
-      },
-    });
+    if (modalRef.current) {
+      gsap.to(modalRef.current, {
+        display: 'none',
+        opacity: 0,
+        duration: 0.3,
+        ease: 'power1.out',
+        onComplete: () => {
+          setCurrentVideoId(null);
+          onClose();
+        },
+      });
+    } else {
+      onClose();
+    }
   };
 
-  if (!videoId) return null;
+  if (!videoId && !currentVideoId) return null;
 
   return (
-    <div className="youtube-Modal" style={{ display: 'none', opacity: 0 }}>
+    <div ref={modalRef} className="youtube-Modal" style={{ display: 'none', opacity: 0 }}>
       <div className="youtube-Modal_Overlay" onClick={handleClose}></div>
       <div className="youtube-Modal_Close" onClick={handleClose}></div>
       <div className="youtube-Modal_Content">
-        <iframe
-          width="900"
-          height="506"
-          src={`https://www.youtube.com/embed/${videoId}?rel=0&autoplay=1`}
-          frameBorder="0"
-          allow="autoplay; encrypted-media"
-          allowFullScreen
-        ></iframe>
+        {currentVideoId && (
+          <iframe
+            key={currentVideoId}
+            width="900"
+            height="506"
+            src={`https://www.youtube.com/embed/${currentVideoId}?rel=0&autoplay=1`}
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+          ></iframe>
+        )}
       </div>
     </div>
   );
