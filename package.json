@@ -1,6 +1,6 @@
 {
   "name": "gcminerva",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Official website for Minerva#24809 Gen3 | FTC robotics team",
   "main": "index.js",
   "scripts": {

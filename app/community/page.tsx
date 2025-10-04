@@ -16,21 +16,14 @@ export default function CommunityPage() {
 
     const preloadTimer = setTimeout(() => {
       document.body.classList.remove('preload');
-    }, 300);
+    }, 100);
 
     // Animation on scroll
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       const windowHeight = window.innerHeight;
 
-      document.querySelectorAll('.js-Animation').forEach((element) => {
-        const elementTop = element.getBoundingClientRect().top + scrollTop;
-        if (elementTop < scrollTop + windowHeight * 0.9) {
-          element.classList.add('animated');
-        }
-      });
-
-      document.querySelectorAll('.fade-Animation').forEach((element) => {
+      document.querySelectorAll('.js-Animation, .fade-Animation').forEach((element) => {
         const elementTop = element.getBoundingClientRect().top + scrollTop;
         if (elementTop < scrollTop + windowHeight * 0.9) {
           element.classList.add('animated');
@@ -46,7 +39,7 @@ export default function CommunityPage() {
     // Wait for page to be fully loaded
     const loadTimer = setTimeout(() => {
       initAnimations();
-    }, 400);
+    }, 200);
 
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('load', initAnimations);

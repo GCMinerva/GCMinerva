@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Script from 'next/script';
 import Header from '@/components/Header';
@@ -16,6 +16,48 @@ export default function ContactPage() {
     message: ''
   });
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+
+  useEffect(() => {
+    document.body.classList.add('preload');
+
+    const preloadTimer = setTimeout(() => {
+      document.body.classList.remove('preload');
+    }, 100);
+
+    // Animation on scroll
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      document.querySelectorAll('.js-Animation, .fade-Animation').forEach((element) => {
+        const elementTop = element.getBoundingClientRect().top + scrollTop;
+        if (elementTop < scrollTop + windowHeight * 0.9) {
+          element.classList.add('animated');
+        }
+      });
+    };
+
+    // Initial check for animations
+    const initAnimations = () => {
+      handleScroll();
+    };
+
+    // Wait for page to be fully loaded
+    const loadTimer = setTimeout(() => {
+      initAnimations();
+    }, 200);
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('load', initAnimations);
+
+    return () => {
+      clearTimeout(preloadTimer);
+      clearTimeout(loadTimer);
+      document.body.classList.remove('preload');
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('load', initAnimations);
+    };
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({

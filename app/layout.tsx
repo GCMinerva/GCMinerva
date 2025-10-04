@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import FAQSchema from "@/components/FAQSchema";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -8,7 +9,36 @@ export const metadata: Metadata = {
     template: "%s | Minerva#24809 Gen3 | FTC",
   },
   description: "Official website for Minerva#24809 Gen3 | FTC robotics team. Discover our journey in robotics, innovation, and technology.",
-  keywords: ["FTC", "robotics", "Minerva", "24809", "Gen3", "FIRST Tech Challenge", "robotics team", "STEM", "technology", "innovation"],
+  keywords: [
+    "FTC",
+    "FIRST Tech Challenge",
+    "robotics",
+    "Minerva",
+    "24809",
+    "Gen3",
+    "robotics team",
+    "STEM",
+    "technology",
+    "innovation",
+    "FTC team 24809",
+    "FIRST robotics",
+    "robotics competition",
+    "Thailand FTC",
+    "Bangkok robotics",
+    "INTO THE DEEP",
+    "FTC 2024-2025",
+    "robotics engineering",
+    "STEM education",
+    "robot design",
+    "programming",
+    "CAD design",
+    "3D modeling",
+    "mechanical engineering",
+    "autonomous robotics",
+    "FTC Thailand",
+    "GC Gen 14",
+    "DECODE challenge"
+  ],
   authors: [{ name: "Minerva#24809 Gen3" }],
   creator: "Minerva#24809 Gen3",
   publisher: "Minerva#24809 Gen3",
@@ -73,14 +103,23 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "SportsTeam",
     "name": "Minerva#24809 Gen3",
-    "description": "FTC robotics team competing in FIRST Tech Challenge",
+    "alternateName": ["Minerva 24809", "Team 24809", "GCMinerva"],
+    "description": "FIRST Tech Challenge (FTC) robotics team #24809 from Thailand, competing in the INTO THE DEEP season. Specializing in robotics engineering, programming, CAD design, and innovation.",
     "url": "https://gcminerva.com",
     "logo": "https://gcminerva.com/assets/images/common/ogp_03.jpg",
+    "image": "https://gcminerva.com/assets/images/common/ogp_03.jpg",
     "sport": "Robotics",
     "memberOf": {
       "@type": "SportsOrganization",
-      "name": "FIRST Tech Challenge"
-    }
+      "name": "FIRST Tech Challenge",
+      "url": "https://www.firstinspires.org/robotics/ftc"
+    },
+    "location": {
+      "@type": "Place",
+      "addressCountry": "TH"
+    },
+    "foundingDate": "2024",
+    "keywords": "FTC, FIRST Tech Challenge, robotics, STEM, Thailand, 24809, INTO THE DEEP, GC Gen 14"
   };
 
   const websiteSchema = {
@@ -88,11 +127,37 @@ export default function RootLayout({
     "@type": "WebSite",
     "name": "Minerva#24809 Gen3 | FTC",
     "url": "https://gcminerva.com",
-    "description": "Official website for Minerva#24809 Gen3 | FTC robotics team",
+    "description": "Official website for Minerva#24809 Gen3 | FTC robotics team. Discover our journey in robotics, innovation, and technology through FIRST Tech Challenge competitions.",
     "publisher": {
       "@type": "Organization",
-      "name": "Minerva#24809 Gen3"
-    }
+      "name": "Minerva#24809 Gen3",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://gcminerva.com/assets/images/common/ogp_03.jpg"
+      }
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://gcminerva.com/search?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    },
+    "inLanguage": "en-US"
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://gcminerva.com"
+      }
+    ]
   };
 
   return (
@@ -112,6 +177,11 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
+        <FAQSchema />
       </head>
       <body className="preload" lang="en">
         {/* Google Tag Manager */}
