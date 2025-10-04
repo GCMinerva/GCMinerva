@@ -3,17 +3,47 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Minerva#24809 Gen3 | FTC",
-  description: "Official website for Minerva#24809 Gen3 | FTC robotics team",
-  metadataBase: new URL('https://gcminerva.com/'),
+  title: {
+    default: "Minerva#24809 Gen3 | FTC",
+    template: "%s | Minerva#24809 Gen3 | FTC",
+  },
+  description: "Official website for Minerva#24809 Gen3 | FTC robotics team. Discover our journey in robotics, innovation, and technology.",
+  keywords: ["FTC", "robotics", "Minerva", "24809", "Gen3", "FIRST Tech Challenge", "robotics team", "STEM", "technology", "innovation"],
+  authors: [{ name: "Minerva#24809 Gen3" }],
+  creator: "Minerva#24809 Gen3",
+  publisher: "Minerva#24809 Gen3",
+  metadataBase: new URL('https://gcminerva.com'),
+  alternates: {
+    canonical: '/',
+    types: {
+      'application/rss+xml': '/atom.xml',
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     type: "website",
+    url: 'https://gcminerva.com',
     title: "Minerva#24809 Gen3 | FTC",
     siteName: "Minerva#24809 Gen3 | FTC",
-    description: "Official website for Minerva#24809 Gen3 | FTC robotics team",
+    description: "Official website for Minerva#24809 Gen3 | FTC robotics team. Discover our journey in robotics, innovation, and technology.",
     images: [
       {
         url: "/assets/images/common/ogp_03.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Minerva#24809 Gen3 | FTC",
       },
     ],
     locale: "en_US",
@@ -27,6 +57,10 @@ export const metadata: Metadata = {
   icons: {
     icon: "/assets/images/common/favicon.ico",
     shortcut: "/assets/images/common/favicon.ico",
+    apple: "/assets/images/common/favicon.ico",
+  },
+  verification: {
+    google: 'google-site-verification-code',
   },
 };
 
@@ -35,6 +69,32 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "SportsTeam",
+    "name": "Minerva#24809 Gen3",
+    "description": "FTC robotics team competing in FIRST Tech Challenge",
+    "url": "https://gcminerva.com",
+    "logo": "https://gcminerva.com/assets/images/common/ogp_03.jpg",
+    "sport": "Robotics",
+    "memberOf": {
+      "@type": "SportsOrganization",
+      "name": "FIRST Tech Challenge"
+    }
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Minerva#24809 Gen3 | FTC",
+    "url": "https://gcminerva.com",
+    "description": "Official website for Minerva#24809 Gen3 | FTC robotics team",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Minerva#24809 Gen3"
+    }
+  };
+
   return (
     <html lang="en">
       <head>
@@ -43,6 +103,14 @@ export default function RootLayout({
         <link
           href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@900&family=Noto+Sans+JP:wght@400;500;700;900&family=Oxanium:wght@500;700&display=swap"
           rel="stylesheet"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
       <body className="preload" lang="en">
