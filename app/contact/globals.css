@@ -1,0 +1,34 @@
+/* Force visibility for contact page content */
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Ensure content is visible */
+.st-Wrapper,
+.contact-Wrapper,
+.intro-Wrapper,
+.contact-social-section,
+.contact-form-section,
+.social-links-grid,
+.contact-form {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+.social-links-grid {
+  display: grid !important;
+}
+
+/* Remove intro-Wrapper background images */
+.intro-Wrapper::before,
+.intro-Wrapper::after {
+  display: none !important;
+  background: none !important;
+}
+
+/* Remove any preload hiding */
+body.preload * {
+  opacity: 1 !important;
+}
