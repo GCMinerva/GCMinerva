@@ -46,7 +46,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
     types: {
-      'application/rss+xml': ['/rss.xml', '/atom.xml'],
+      'application/rss+xml': '/rss.xml',
+      'application/atom+xml': '/atom.xml',
     },
   },
   robots: {
