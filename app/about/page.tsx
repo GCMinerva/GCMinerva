@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Script from 'next/script';
 import Footer from '@/components/Footer';
 import './globals.css';
+import './about.css';
 
 export default function AboutPage() {
   useEffect(() => {
@@ -144,14 +145,18 @@ export default function AboutPage() {
 
       <Script
         src="https://code.jquery.com/jquery-3.6.0.min.js"
-        strategy="beforeInteractive"
+        strategy="lazyOnload"
+        onLoad={() => {
+          // jQuery loaded
+          console.log('jQuery loaded');
+        }}
       />
       <Script
         src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
-        strategy="beforeInteractive"
+        strategy="lazyOnload"
       />
-      <Script src="/assets/js/common/lib.js" strategy="afterInteractive" />
-      <Script src="/assets/js/story/app.bundle.js" strategy="afterInteractive" />
+      <Script src="/assets/js/common/lib.js" strategy="lazyOnload" />
+      <Script src="/assets/js/story/app.bundle.js" strategy="lazyOnload" />
     </>
   );
 }

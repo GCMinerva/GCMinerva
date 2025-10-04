@@ -1,0 +1,37 @@
+.intro-Wrapper {
+  overflow: visible !important;
+}
+
+.catch-Wrapper {
+  position: relative !important;
+  padding: 3rem 0;
+  overflow: visible !important;
+}
+
+.catch-Wrapper::before {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  z-index: -1 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  background: url(/assets/images/common/story/deco-story-catch.png) top left/contain no-repeat !important;
+}
+
+/* Desktop styles for catch-Wrapper decoration */
+@media (min-width: 1025px) {
+  .catch-Wrapper::before {
+    width: 1302px !important;
+    height: 174px !important;
+    left: -178px !important;
+  }
+}
+
+/* Mobile styles for catch-Wrapper decoration */
+@media (max-width: 1024px) {
+  .catch-Wrapper::before {
+    width: 100% !important;
+    height: 80px !important;
+    left: 0 !important;
+  }
+}
