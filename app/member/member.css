@@ -1,0 +1,17 @@
+/* Force visibility for character page content */
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+.st-Wrapper,
+.character-Wrapper,
+.character-detail-Wrapper {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+body.preload * {
+  opacity: 1 !important;
+}
