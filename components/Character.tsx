@@ -14,7 +14,7 @@ export default function Character() {
       </h2>
       <ul className="character-Group-List js-Animation">
         <li>
-          <Link href="/character/#art">
+          <Link href="/member/#art">
             <Image
               src="/assets/images/common/index/img_art.png"
               alt="ART"
@@ -26,7 +26,7 @@ export default function Character() {
           </Link>
         </li>
         <li>
-          <Link href="/character/#build">
+          <Link href="/member/#build">
             <Image
               src="/assets/images/common/index/img_build.png"
               alt="BUILD"
@@ -38,7 +38,7 @@ export default function Character() {
           </Link>
         </li>
         <li>
-          <Link href="/character/#cad">
+          <Link href="/member/#cad">
             <Image
               src="/assets/images/common/index/img_cad.png"
               alt="CAD"
@@ -50,7 +50,7 @@ export default function Character() {
           </Link>
         </li>
         <li>
-          <Link href="/character/#program">
+          <Link href="/member/#program">
             <Image
               src="/assets/images/common/index/img_code.png"
               alt="PROGRAM"
@@ -62,7 +62,7 @@ export default function Character() {
           </Link>
         </li>
       </ul>
-      <Link className="sw-All-Btn" href="/character/">
+      <Link className="sw-All-Btn" href="/member/">
         <span>ALL MEMBER</span>
       </Link>
     </section>
