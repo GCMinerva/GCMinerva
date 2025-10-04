@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import Link from 'next/link';
 import Script from 'next/script';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -54,7 +55,7 @@ export default function SocialPage() {
 
         <div className="st-Wrapper">
           <div className="sw-Sub">
-            <h1 className="logo"><a href="/"><img src="/assets/images/common/logo.png" alt="Minerva#24809 Gen3 | FTC" decoding="async" /></a></h1>
+            <h1 className="logo"><Link href="/"><img src="/assets/images/common/logo.png" alt="Minerva#24809 Gen3 | FTC" decoding="async" /></Link></h1>
             <h2 className="sw-Lower-Ttl js-Animation ttl-Slide"><span>S</span><span>O</span><span>C</span><span>I</span><span>A</span><span>L</span></h2>
           </div>
 

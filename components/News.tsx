@@ -71,7 +71,7 @@ export default function News() {
             const { year, md } = formatDate(item.date);
             return (
               <li key={index} className="news-Item js-Animation">
-                <a href={item.link}>
+                <Link href={item.link}>
                   <dl>
                     <dt className="date">
                       <span className="year">{year}</span>
@@ -82,7 +82,7 @@ export default function News() {
                       dangerouslySetInnerHTML={{ __html: item.title.rendered }}
                     />
                   </dl>
-                </a>
+                </Link>
               </li>
             );
           })}
