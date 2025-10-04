@@ -6,8 +6,9 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://gcminerva.com/sitemap.xml
-Sitemap: https://gcminerva.com/atom.xml
+Sitemap: https://minerva.jnx03.xyz/sitemap.xml
+Sitemap: https://minerva.jnx03.xyz/atom.xml
+Sitemap: https://minerva.jnx03.xyz/rss.xml
 
 # Crawl-delay for politeness
 Crawl-delay: 0

@@ -2,7 +2,7 @@ import RSS from 'rss'
 import { NextResponse } from 'next/server'
 
 export async function GET() {
-  const baseUrl = 'https://gcminerva.com'
+  const baseUrl = 'https://minerva.jnx03.xyz'
 
   const feed = new RSS({
     title: 'Minerva#24809 Gen3 | FTC',

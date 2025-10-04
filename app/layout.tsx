@@ -42,11 +42,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Minerva#24809 Gen3" }],
   creator: "Minerva#24809 Gen3",
   publisher: "Minerva#24809 Gen3",
-  metadataBase: new URL('https://gcminerva.com'),
+  metadataBase: new URL('https://minerva.jnx03.xyz'),
   alternates: {
     canonical: '/',
     types: {
-      'application/rss+xml': '/atom.xml',
+      'application/rss+xml': ['/rss.xml', '/atom.xml'],
     },
   },
   robots: {
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: 'https://gcminerva.com',
+    url: 'https://minerva.jnx03.xyz',
     title: "Minerva#24809 Gen3 | FTC",
     siteName: "Minerva#24809 Gen3 | FTC",
     description: "Official website for Minerva#24809 Gen3 | FTC robotics team. Discover our journey in robotics, innovation, and technology.",
@@ -105,9 +105,9 @@ export default function RootLayout({
     "name": "Minerva#24809 Gen3",
     "alternateName": ["Minerva 24809", "Team 24809", "GCMinerva"],
     "description": "FIRST Tech Challenge (FTC) robotics team #24809 from Thailand, competing in the INTO THE DEEP season. Specializing in robotics engineering, programming, CAD design, and innovation.",
-    "url": "https://gcminerva.com",
-    "logo": "https://gcminerva.com/assets/images/common/ogp_03.jpg",
-    "image": "https://gcminerva.com/assets/images/common/ogp_03.jpg",
+    "url": "https://minerva.jnx03.xyz",
+    "logo": "https://minerva.jnx03.xyz/assets/images/common/ogp_03.jpg",
+    "image": "https://minerva.jnx03.xyz/assets/images/common/ogp_03.jpg",
     "sport": "Robotics",
     "memberOf": {
       "@type": "SportsOrganization",
@@ -126,21 +126,21 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Minerva#24809 Gen3 | FTC",
-    "url": "https://gcminerva.com",
+    "url": "https://minerva.jnx03.xyz",
     "description": "Official website for Minerva#24809 Gen3 | FTC robotics team. Discover our journey in robotics, innovation, and technology through FIRST Tech Challenge competitions.",
     "publisher": {
       "@type": "Organization",
       "name": "Minerva#24809 Gen3",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://gcminerva.com/assets/images/common/ogp_03.jpg"
+        "url": "https://minerva.jnx03.xyz/assets/images/common/ogp_03.jpg"
       }
     },
     "potentialAction": {
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://gcminerva.com/search?q={search_term_string}"
+        "urlTemplate": "https://minerva.jnx03.xyz/search?q={search_term_string}"
       },
       "query-input": "required name=search_term_string"
     },
@@ -155,7 +155,7 @@ export default function RootLayout({
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://gcminerva.com"
+        "item": "https://minerva.jnx03.xyz"
       }
     ]
   };
