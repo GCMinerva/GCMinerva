@@ -1,0 +1,71 @@
+/* Sponser page custom styles */
+.intro-Wrapper {
+  overflow: visible !important;
+}
+
+.intro-Wrapper::before,
+.intro-Wrapper::after {
+  display: none !important;
+  background: none !important;
+}
+
+.catch-Wrapper {
+  position: relative !important;
+  padding: 3rem 0;
+  overflow: visible !important;
+}
+
+/* Hide the background image */
+.catch-Wrapper::before {
+  display: none !important;
+}
+
+.sponser-tiers-list .list a {
+  color: #003350;
+  font-family: 'Oxanium', cursive;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.sponser-tiers-list .gold-tier a:hover {
+  color: #FFD700;
+}
+
+.sponser-tiers-list .silver-tier a:hover {
+  color: #C0C0C0;
+}
+
+.sponser-tiers-list .bronze-tier a:hover {
+  color: #CD7F32;
+}
+
+.benefit-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.benefit-list li {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  color: #003350;
+  line-height: 2;
+  padding-left: 0.5rem;
+}
+
+.benefit-list li::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #00d1ff;
+  border-radius: 50%;
+  margin-right: 0.8rem;
+  vertical-align: middle;
+}
+
+/* Contact button hover effect */
+.story-detail-container a[href="/contact"]:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 209, 255, 0.5) !important;
+}
