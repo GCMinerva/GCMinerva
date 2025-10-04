@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Script from 'next/script';
+import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import './globals.css';
 import './contact.css';
@@ -75,26 +76,7 @@ export default function ContactPage() {
       <link rel="stylesheet" href="/assets/css/story/style.css" />
 
       <div>
-        <header className="st-Header">
-          <div className="st-Header_Hamburger">
-            <div className="navi-deco"><span></span><span></span></div><span className="menu"></span>
-          </div>
-          <div className="st-Header_Menu">
-            <div className="bg-auto"></div>
-            <div className="right-menu">
-              <ul className="st-Header_Nav js-Animation">
-                <li><a href="/">HOME</a></li>
-                <li><a href="/about">ABOUT</a></li>
-                <li><a href="/member/">MEMBER</a></li>
-                <li><a href="/sponser/">SPONSER</a></li>
-                <li><a href="/project/">PROJECT</a></li>
-                <li><a href="/community/">COMMUNITY</a></li>
-                <li><a href="/social/">SOCIAL</a></li>
-                <li><a className="current" href="/contact/">CONTACT</a></li>
-              </ul>
-            </div>
-          </div>
-        </header>
+        <Header />
 
         <div className="st-Wrapper">
           <div className="sw-Sub">
