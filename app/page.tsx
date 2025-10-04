@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Loading from '@/components/Loading';
@@ -10,7 +10,18 @@ import Movie from '@/components/Movie';
 import Character from '@/components/Character';
 
 export default function Home() {
+  const mountedRef = useRef(false);
+
   useEffect(() => {
+    mountedRef.current = true;
+
+    return () => {
+      mountedRef.current = false;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!mountedRef.current) return;
     // Animation on scroll
     const handleScroll = () => {
       const scrollTop = window.scrollY;
@@ -95,6 +106,8 @@ export default function Home() {
     handleBackToTopClick();
 
     return () => {
+      if (!mountedRef.current) return;
+
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('scroll', handleBackToTopVisibility);
       document.removeEventListener('click', handleAnchorClick);
@@ -106,7 +119,7 @@ export default function Home() {
         });
       }
     };
-  }, []);
+  }, [mountedRef]);
 
   return (
     <>

@@ -8,7 +8,10 @@ import '@splidejs/splide/dist/css/splide.min.css';
 
 export default function KeyVisual() {
   useEffect(() => {
+    let mounted = true;
     const timer = setTimeout(() => {
+      if (!mounted) return;
+
       const mainSplide = document.querySelector('.kv-select-Wrapper') as any;
       const thumbnailSplide = document.querySelector('#thumbnail-carousel') as any;
 
@@ -19,7 +22,29 @@ export default function KeyVisual() {
       }
     }, 100);
 
-    return () => clearTimeout(timer);
+    return () => {
+      mounted = false;
+      clearTimeout(timer);
+
+      // Clean up Splide instances
+      const mainSplide = document.querySelector('.kv-select-Wrapper') as any;
+      const thumbnailSplide = document.querySelector('#thumbnail-carousel') as any;
+
+      if (mainSplide?.splide) {
+        try {
+          mainSplide.splide.destroy();
+        } catch (e) {
+          // Ignore errors during cleanup
+        }
+      }
+      if (thumbnailSplide?.splide) {
+        try {
+          thumbnailSplide.splide.destroy();
+        } catch (e) {
+          // Ignore errors during cleanup
+        }
+      }
+    };
   }, []);
 
   return (
@@ -104,8 +129,8 @@ export default function KeyVisual() {
           </picture>
         </div>
 
-        <div className="index-Menu">
-          <ul>
+        <div className="index-Menu" suppressHydrationWarning>
+          <ul suppressHydrationWarning>
             <li>
               <Link className="current" href="/">
                 HOME
