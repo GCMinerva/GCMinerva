@@ -43,7 +43,7 @@ export default function YoutubeModal({ videoId, onClose }: YoutubeModalProps) {
       duration: 0.3,
       ease: 'power1.out',
       onComplete: () => {
-        if (content?.firstChild) {
+        if (content?.firstChild && content.contains(content.firstChild)) {
           content.removeChild(content.firstChild);
         }
         onClose();

@@ -1,0 +1,26 @@
+/* Force visibility for community page content */
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Ensure content is visible */
+.st-Wrapper,
+.project-Wrapper,
+.intro-Wrapper {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+/* Remove intro-Wrapper background images */
+.intro-Wrapper::before,
+.intro-Wrapper::after {
+  display: none !important;
+  background: none !important;
+}
+
+/* Remove any preload hiding */
+body.preload * {
+  opacity: 1 !important;
+}
