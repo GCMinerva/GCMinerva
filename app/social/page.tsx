@@ -148,19 +148,9 @@ export default function SocialPage() {
       </div>
 
       <Script
-        src="https://code.jquery.com/jquery-3.6.0.min.js"
-        strategy="lazyOnload"
-        onLoad={() => {
-          // jQuery loaded
-          console.log('jQuery loaded');
-        }}
-      />
-      <Script
         src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
         strategy="lazyOnload"
       />
-      <Script src="/assets/js/common/lib.js" strategy="lazyOnload" />
-      <Script src="/assets/js/story/app.bundle.js" strategy="lazyOnload" />
     </>
   );
 }

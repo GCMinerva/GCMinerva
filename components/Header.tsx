@@ -2,8 +2,11 @@
 
 import { useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
+  const pathname = usePathname();
+
   useEffect(() => {
     const hamburger = document.querySelector('.st-Header_Hamburger');
     const header = document.querySelector('.st-Header');
@@ -19,6 +22,12 @@ export default function Header() {
     };
   }, []);
 
+  // Close menu when navigating
+  useEffect(() => {
+    const header = document.querySelector('.st-Header');
+    header?.classList.remove('opened');
+  }, [pathname]);
+
   return (
     <header className="st-Header">
       <div className="st-Header_Hamburger">
@@ -33,7 +42,7 @@ export default function Header() {
         <div className="right-menu">
           <ul className="st-Header_Nav js-Animation">
             <li>
-              <Link className="current" href="/">
+              <Link href="/">
                 HOME
               </Link>
             </li>

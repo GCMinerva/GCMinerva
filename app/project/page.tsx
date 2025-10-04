@@ -179,38 +179,8 @@ export default function ProjectPage() {
       </div>
 
       <Script
-        src="https://code.jquery.com/jquery-3.6.0.min.js"
-        strategy="afterInteractive"
-        onLoad={() => {
-          if (!scriptsLoaded.current) {
-            scriptsLoaded.current = true;
-            console.log('jQuery loaded');
-          }
-        }}
-        onError={(e) => {
-          console.error('jQuery failed to load:', e);
-        }}
-      />
-      <Script
         src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
-        strategy="afterInteractive"
-        onError={(e) => {
-          console.error('Swiper failed to load:', e);
-        }}
-      />
-      <Script
-        src="/assets/js/common/lib.js"
-        strategy="afterInteractive"
-        onError={(e) => {
-          console.error('lib.js failed to load:', e);
-        }}
-      />
-      <Script
-        src="/assets/js/story/app.bundle.js"
-        strategy="afterInteractive"
-        onError={(e) => {
-          console.error('app.bundle.js failed to load:', e);
-        }}
+        strategy="lazyOnload"
       />
     </>
   );
