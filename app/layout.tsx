@@ -5,6 +5,7 @@ import EventSchema from "@/components/EventSchema";
 import TeamSchema from "@/components/TeamSchema";
 import WebVitals from "@/components/WebVitals";
 import SkipToContent from "@/components/SkipToContent";
+import ErrorBoundary from "@/components/ErrorBoundary";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -198,6 +199,7 @@ export default function RootLayout({
       <body className="preload" lang="en">
         <SkipToContent />
         <WebVitals />
+        <ErrorBoundary />
         {/* Google Tag Manager */}
         <Script
           id="gtm-1"
