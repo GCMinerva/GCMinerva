@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import FAQSchema from "@/components/FAQSchema";
+import EventSchema from "@/components/EventSchema";
+import TeamSchema from "@/components/TeamSchema";
+import WebVitals from "@/components/WebVitals";
+import SkipToContent from "@/components/SkipToContent";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -43,13 +47,6 @@ export const metadata: Metadata = {
   creator: "Minerva#24809 Gen3",
   publisher: "Minerva#24809 Gen3",
   metadataBase: new URL('https://minerva.jnx03.xyz'),
-  alternates: {
-    canonical: '/',
-    types: {
-      'application/rss+xml': '/rss.xml',
-      'application/atom+xml': '/atom.xml',
-    },
-  },
   robots: {
     index: true,
     follow: true,
@@ -78,6 +75,18 @@ export const metadata: Metadata = {
       },
     ],
     locale: "en_US",
+    alternateLocale: ["th_TH"],
+  },
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en': '/',
+      'th': '/th',
+    },
+    types: {
+      'application/rss+xml': '/rss.xml',
+      'application/atom+xml': '/atom.xml',
+    },
   },
   twitter: {
     card: "summary_large_image",
@@ -183,8 +192,12 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
         />
         <FAQSchema />
+        <EventSchema />
+        <TeamSchema />
       </head>
       <body className="preload" lang="en">
+        <SkipToContent />
+        <WebVitals />
         {/* Google Tag Manager */}
         <Script
           id="gtm-1"

@@ -29,45 +29,61 @@ export default function Header() {
   }, [pathname]);
 
   return (
-    <header className="st-Header">
-      <div className="st-Header_Hamburger">
+    <header className="st-Header" role="banner">
+      <button
+        className="st-Header_Hamburger"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
         <div className="navi-deco">
           <span></span>
           <span></span>
         </div>
         <span className="menu"></span>
-      </div>
+      </button>
       <div className="st-Header_Menu">
         <div className="bg-auto"></div>
         <div className="right-menu">
-          <ul className="st-Header_Nav js-Animation">
-            <li>
-              <Link href="/">
-                HOME
-              </Link>
-            </li>
-            <li>
-              <Link href="/about/">ABOUT</Link>
-            </li>
-            <li>
-              <Link href="/member/">MEMBER</Link>
-            </li>
-            <li>
-              <Link href="/sponser/">SPONSER</Link>
-            </li>
-            <li>
-              <Link href="/project/">PROJECT</Link>
-            </li>
-            <li>
-              <Link href="/community/">COMMUNITY</Link>
-            </li>
-            <li>
-              <Link href="/social/">SOCIAL</Link>
-            </li>
-            <li>
-              <Link href="/contact/">CONTACT</Link>
-            </li>
-          </ul>
+          <nav aria-label="Main navigation" id="main-navigation">
+            <ul className="st-Header_Nav js-Animation">
+              <li>
+                <Link href="/" aria-label="Go to homepage">
+                  HOME
+                </Link>
+              </li>
+              <li>
+                <Link href="/about/" aria-label="Learn about our team">ABOUT</Link>
+              </li>
+              <li>
+                <Link href="/member/" aria-label="Meet our team members">MEMBER</Link>
+              </li>
+              <li>
+                <Link href="/sponser/" aria-label="View our sponsors">SPONSER</Link>
+              </li>
+              <li>
+                <Link href="/project/" aria-label="Explore our projects">PROJECT</Link>
+              </li>
+              <li>
+                <Link href="/blog/" aria-label="Read our blog and news">BLOG</Link>
+              </li>
+              <li>
+                <Link href="/competitions/" aria-label="View competition results">COMPETITIONS</Link>
+              </li>
+              <li>
+                <Link href="/robot/" aria-label="View robot specifications">ROBOT</Link>
+              </li>
+              <li>
+                <Link href="/community/" aria-label="Join our community">COMMUNITY</Link>
+              </li>
+              <li>
+                <Link href="/social/" aria-label="Follow us on social media">SOCIAL</Link>
+              </li>
+              <li>
+                <Link href="/contact/" aria-label="Contact us">CONTACT</Link>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </header>
