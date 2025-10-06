@@ -33,6 +33,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# PWA files
+**/public/workbox-*.js
+**/public/sw.js
+**/public/worker-*.js
 
 /assets
 .claude

@@ -100,6 +100,12 @@ export const metadata: Metadata = {
     shortcut: "/assets/images/common/favicon.ico",
     apple: "/assets/images/common/favicon.ico",
   },
+  manifest: '/manifest.json',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Minerva#24809 Gen3',
+  },
   verification: {
     google: 'google-site-verification-code',
   },
@@ -174,6 +180,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="theme-color" content="#000000" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="application-name" content="Minerva FTC" />
+        <meta name="apple-mobile-web-app-title" content="Minerva FTC" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

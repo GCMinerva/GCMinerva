@@ -1,0 +1,27 @@
+{
+  "name": "Minerva#24809 Gen3 | FTC",
+  "short_name": "Minerva FTC",
+  "description": "Official website for Minerva#24809 Gen3 | FTC robotics team",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/assets/images/common/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/assets/images/common/ogp_03.jpg",
+      "sizes": "1200x630",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["robotics", "technology", "education", "STEM"],
+  "lang": "en-US",
+  "dir": "ltr"
+}
