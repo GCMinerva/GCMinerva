@@ -6,9 +6,9 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://minerva.jnx03.xyz/sitemap.xml
-Sitemap: https://minerva.jnx03.xyz/atom.xml
-Sitemap: https://minerva.jnx03.xyz/rss.xml
+Sitemap: https://gcminerva.com/sitemap.xml
+Sitemap: https://gcminerva.com/atom.xml
+Sitemap: https://gcminerva.com/rss.xml
 
 # Crawl-delay for politeness
 Crawl-delay: 0
@@ -36,7 +36,10 @@ User-agent: Baiduspider
 Allow: /
 
 User-agent: YandexBot
-Allow: /`
+Allow: /
+
+# Host
+Host: https://gcminerva.com`
 
   return new NextResponse(robotsTxt, {
     headers: {
