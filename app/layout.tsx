@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     description: "Official website for Minerva#24809 Gen3 | FTC robotics team. Discover our journey in robotics, innovation, and technology.",
     images: [
       {
-        url: "/assets/images/common/ogp_03.jpg",
+        url: "/assets/images/common/index/bnr.png",
         width: 1200,
         height: 630,
         alt: "Minerva#24809 Gen3 | FTC",
@@ -93,7 +93,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Minerva#24809 Gen3 | FTC",
     description: "Official website for Minerva#24809 Gen3 | FTC robotics team",
-    images: ["/assets/images/common/ogp_03.jpg"],
+    images: ["/assets/images/common/index/bnr.png"],
   },
   icons: {
     icon: "/assets/images/common/favicon.ico",
@@ -123,8 +123,8 @@ export default function RootLayout({
     "alternateName": ["Minerva 24809", "Team 24809", "GCMinerva"],
     "description": "FIRST Tech Challenge (FTC) robotics team #24809 from Thailand, competing in the INTO THE DEEP season. Specializing in robotics engineering, programming, CAD design, and innovation.",
     "url": "https://minerva.jnx03.xyz",
-    "logo": "https://minerva.jnx03.xyz/assets/images/common/ogp_03.jpg",
-    "image": "https://minerva.jnx03.xyz/assets/images/common/ogp_03.jpg",
+    "logo": "https://minerva.jnx03.xyz/assets/images/common/index/bnr.png",
+    "image": "https://minerva.jnx03.xyz/assets/images/common/index/bnr.png",
     "sport": "Robotics",
     "memberOf": {
       "@type": "SportsOrganization",
@@ -150,7 +150,7 @@ export default function RootLayout({
       "name": "Minerva#24809 Gen3",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://minerva.jnx03.xyz/assets/images/common/ogp_03.jpg"
+        "url": "https://minerva.jnx03.xyz/assets/images/common/index/bnr.png"
       }
     },
     "potentialAction": {
