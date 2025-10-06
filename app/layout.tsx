@@ -19,6 +19,8 @@ export const metadata: Metadata = {
     "FIRST Tech Challenge",
     "robotics",
     "Minerva",
+    "GCMinerva",
+    "GCMinerva Robotics",
     "24809",
     "Gen3",
     "robotics team",
@@ -29,8 +31,11 @@ export const metadata: Metadata = {
     "FIRST robotics",
     "robotics competition",
     "Thailand FTC",
+    "FTC Thailand",
     "Bangkok robotics",
     "INTO THE DEEP",
+    "DECODE 2025-2026",
+    "DECODE challenge",
     "FTC 2024-2025",
     "robotics engineering",
     "STEM education",
@@ -40,9 +45,16 @@ export const metadata: Metadata = {
     "3D modeling",
     "mechanical engineering",
     "autonomous robotics",
-    "FTC Thailand",
+    "AI robotics",
+    "AI FTC tools",
+    "FTC tools",
+    "AI-powered robotics",
+    "machine learning robotics",
+    "computer vision FTC",
+    "autonomous systems",
     "GC Gen 14",
-    "DECODE challenge"
+    "open innovation projects",
+    "robotics Thailand"
   ],
   authors: [{ name: "Minerva#24809 Gen3" }],
   creator: "Minerva#24809 Gen3",
@@ -108,6 +120,12 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'google-site-verification-code',
+    yandex: 'yandex-verification-code',
+    other: {
+      'msvalidate.01': 'bing-verification-code',
+      'baidu-site-verification': 'baidu-verification-code',
+      'naver-site-verification': 'naver-verification-code',
+    },
   },
 };
 

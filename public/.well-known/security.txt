@@ -1,0 +1,12 @@
+Contact: https://github.com/GCMinerva/GCMinerva/security/advisories/new
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: en, th
+Canonical: https://minerva.jnx03.xyz/.well-known/security.txt
+Policy: https://github.com/GCMinerva/GCMinerva/security/policy
+Acknowledgments: https://github.com/GCMinerva/GCMinerva/security/advisories
+
+# Our security disclosure policy
+# If you discover a security vulnerability in this website or our robotics systems,
+# please report it responsibly through GitHub Security Advisories.
+#
+# We appreciate your efforts to responsibly disclose your findings.

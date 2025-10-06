@@ -1,0 +1,26 @@
+/* TEAM */
+Team: GCMinerva#24809 Gen3 - FTC Robotics Team
+Location: Bangkok, Thailand
+Competition: FIRST Tech Challenge DECODE 2025-2026
+Website: https://minerva.jnx03.xyz
+GitHub: https://github.com/GCMinerva
+
+/* SITE */
+Standards: HTML5, CSS3, JavaScript, TypeScript
+Components: React 19, Next.js 15
+Progressive Web App: Yes
+Build Tools: Next.js, next-pwa, next-sitemap
+Analytics: Google Tag Manager
+Fonts: Google Fonts (M PLUS 1, Noto Sans JP, Oxanium)
+
+/* THANKS */
+FIRST Tech Challenge
+Open Source Community
+Sponsors and Partners
+
+/* LOCATION */
+Organization: GC Gen 14
+Country: Thailand
+League: FTC Thailand
+
+Last update: 2025-10-06
