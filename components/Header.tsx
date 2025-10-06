@@ -8,6 +8,23 @@ export default function Header() {
   const pathname = usePathname();
 
   useEffect(() => {
+    // Auto-reload on error (once)
+    const handleError = () => {
+      const hasReloaded = sessionStorage.getItem('error-reloaded');
+      if (!hasReloaded) {
+        sessionStorage.setItem('error-reloaded', 'true');
+        window.location.reload();
+      }
+    };
+
+    window.addEventListener('error', handleError);
+
+    return () => {
+      window.removeEventListener('error', handleError);
+    };
+  }, []);
+
+  useEffect(() => {
     const hamburger = document.querySelector('.st-Header_Hamburger');
     const header = document.querySelector('.st-Header');
 
@@ -30,18 +47,13 @@ export default function Header() {
 
   return (
     <header className="st-Header" role="banner">
-      <button
-        className="st-Header_Hamburger"
-        aria-label="Toggle navigation menu"
-        aria-expanded="false"
-        aria-controls="main-navigation"
-      >
+      <div className="st-Header_Hamburger">
         <div className="navi-deco">
           <span></span>
           <span></span>
         </div>
         <span className="menu"></span>
-      </button>
+      </div>
       <div className="st-Header_Menu">
         <div className="bg-auto"></div>
         <div className="right-menu">
@@ -63,15 +75,6 @@ export default function Header() {
               </li>
               <li>
                 <Link href="/project/" aria-label="Explore our projects">PROJECT</Link>
-              </li>
-              <li>
-                <Link href="/blog/" aria-label="Read our blog and news">BLOG</Link>
-              </li>
-              <li>
-                <Link href="/competitions/" aria-label="View competition results">COMPETITIONS</Link>
-              </li>
-              <li>
-                <Link href="/robot/" aria-label="View robot specifications">ROBOT</Link>
               </li>
               <li>
                 <Link href="/community/" aria-label="Join our community">COMMUNITY</Link>
