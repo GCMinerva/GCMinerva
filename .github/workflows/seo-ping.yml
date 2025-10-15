@@ -54,6 +54,14 @@ jobs:
             -w "\nStatus: %{http_code}\n"
         continue-on-error: true
 
+      - name: Aggressive backlink boost
+        run: |
+          echo "🚀 Creating aggressive backlink signals and tagging..."
+          curl -X POST https://gcminerva.co/api/backlink-boost \
+            -H "Content-Type: application/json" \
+            -w "\nStatus: %{http_code}\n"
+        continue-on-error: true
+
       - name: Ping dekport.com sitemap
         run: |
           echo "Pinging dekport.com to Google and Bing..."

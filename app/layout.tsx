@@ -155,7 +155,14 @@ export default function RootLayout({
       "addressCountry": "TH"
     },
     "foundingDate": "2024",
-    "keywords": "FTC, FIRST Tech Challenge, robotics, STEM, Thailand, 24809, INTO THE DEEP, GC Gen 14"
+    "keywords": "FTC, FIRST Tech Challenge, robotics, STEM, Thailand, 24809, INTO THE DEEP, GC Gen 14",
+    "sameAs": [
+      "https://dekport.com",
+      "https://jnx03.xyz",
+      "https://github.com/GCMinerva",
+      "https://www.youtube.com/@gcminerva",
+      "https://twitter.com/gcminerva"
+    ]
   };
 
   const websiteSchema = {
@@ -180,7 +187,19 @@ export default function RootLayout({
       },
       "query-input": "required name=search_term_string"
     },
-    "inLanguage": "en-US"
+    "inLanguage": "en-US",
+    "sameAs": [
+      "https://dekport.com",
+      "https://jnx03.xyz"
+    ],
+    "relatedLink": [
+      "https://dekport.com",
+      "https://jnx03.xyz"
+    ],
+    "significantLink": [
+      "https://dekport.com",
+      "https://jnx03.xyz"
+    ]
   };
 
   const breadcrumbSchema = {
@@ -204,6 +223,17 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="application-name" content="Minerva FTC" />
         <meta name="apple-mobile-web-app-title" content="Minerva FTC" />
+
+        {/* Cross-site relationship tags for SEO boost */}
+        <link rel="related" href="https://dekport.com" />
+        <link rel="related" href="https://jnx03.xyz" />
+        <link rel="dns-prefetch" href="https://dekport.com" />
+        <link rel="dns-prefetch" href="https://jnx03.xyz" />
+        <meta name="article:author" content="https://dekport.com" />
+        <meta name="article:publisher" content="https://jnx03.xyz" />
+        <meta name="citation_author" content="Dekport | JNX03" />
+        <meta name="citation_publisher" content="GC Minerva Network" />
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

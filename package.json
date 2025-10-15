@@ -10,6 +10,8 @@
     "lint": "next lint",
     "seo:ping": "node scripts/ping-seo.js",
     "seo:network": "curl -X POST https://gcminerva.co/api/cross-site-boost",
+    "seo:boost": "curl -X POST https://gcminerva.co/api/backlink-boost",
+    "seo:all": "npm run seo:ping && npm run seo:network && npm run seo:boost",
     "seo:validate": "curl https://gcminerva.co/sitemap.xml && curl https://gcminerva.co/robots.txt"
   },
   "repository": {
