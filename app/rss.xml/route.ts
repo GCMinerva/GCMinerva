@@ -2,7 +2,7 @@ import RSS from 'rss'
 import { NextResponse } from 'next/server'
 
 export async function GET() {
-  const baseUrl = 'https://minerva.jnx03.xyz'
+  const baseUrl = 'https://gcminerva.co'
 
   const feed = new RSS({
     title: 'Minerva#24809 Gen3 | FTC Robotics Team',
@@ -12,8 +12,8 @@ export async function GET() {
     language: 'en',
     pubDate: new Date(),
     copyright: `All rights reserved ${new Date().getFullYear()}, Minerva#24809 Gen3`,
-    managingEditor: 'team@minerva.jnx03.xyz (Minerva#24809 Gen3 Team)',
-    webMaster: 'webmaster@minerva.jnx03.xyz (Minerva#24809 Webmaster)',
+    managingEditor: 'team@gcminerva.co (Minerva#24809 Gen3 Team)',
+    webMaster: 'webmaster@gcminerva.co (Minerva#24809 Webmaster)',
     ttl: 60,
     categories: ['Robotics', 'FTC', 'FIRST Tech Challenge', 'STEM', 'Education', 'Technology'],
   })

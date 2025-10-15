@@ -6,9 +6,10 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://minerva.jnx03.xyz/sitemap.xml
-Sitemap: https://minerva.jnx03.xyz/atom.xml
-Sitemap: https://minerva.jnx03.xyz/rss.xml
+Sitemap: https://gcminerva.co/sitemap.xml
+Sitemap: https://gcminerva.co/atom.xml
+Sitemap: https://gcminerva.co/rss.xml
+Sitemap: https://gcminerva.co/feed.json
 
 # Crawl-delay for politeness
 Crawl-delay: 0
@@ -45,7 +46,7 @@ User-agent: Yeti
 Allow: /
 
 # Host
-Host: https://minerva.jnx03.xyz`
+Host: https://gcminerva.co`
 
   return new NextResponse(robotsTxt, {
     headers: {

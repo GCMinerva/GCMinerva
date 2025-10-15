@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Minerva#24809 Gen3" }],
   creator: "Minerva#24809 Gen3",
   publisher: "Minerva#24809 Gen3",
-  metadataBase: new URL('https://minerva.jnx03.xyz'),
+  metadataBase: new URL('https://gcminerva.co'),
   robots: {
     index: true,
     follow: true,
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: 'https://minerva.jnx03.xyz',
+    url: 'https://gcminerva.co',
     title: "Minerva#24809 Gen3 | FTC",
     siteName: "Minerva#24809 Gen3 | FTC",
     description: "Official website for Minerva#24809 Gen3 | FTC robotics team. Discover our journey in robotics, innovation, and technology.",
@@ -99,6 +99,7 @@ export const metadata: Metadata = {
     types: {
       'application/rss+xml': '/rss.xml',
       'application/atom+xml': '/atom.xml',
+      'application/feed+json': '/feed.json',
     },
   },
   twitter: {
@@ -140,9 +141,9 @@ export default function RootLayout({
     "name": "Minerva#24809 Gen3",
     "alternateName": ["Minerva 24809", "Team 24809", "GCMinerva"],
     "description": "FIRST Tech Challenge (FTC) robotics team #24809 from Thailand, competing in the INTO THE DEEP season. Specializing in robotics engineering, programming, CAD design, and innovation.",
-    "url": "https://minerva.jnx03.xyz",
-    "logo": "https://minerva.jnx03.xyz/assets/images/common/index/bnr.png",
-    "image": "https://minerva.jnx03.xyz/assets/images/common/index/bnr.png",
+    "url": "https://gcminerva.co",
+    "logo": "https://gcminerva.co/assets/images/common/index/bnr.png",
+    "image": "https://gcminerva.co/assets/images/common/index/bnr.png",
     "sport": "Robotics",
     "memberOf": {
       "@type": "SportsOrganization",
@@ -161,21 +162,21 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Minerva#24809 Gen3 | FTC",
-    "url": "https://minerva.jnx03.xyz",
+    "url": "https://gcminerva.co",
     "description": "Official website for Minerva#24809 Gen3 | FTC robotics team. Discover our journey in robotics, innovation, and technology through FIRST Tech Challenge competitions.",
     "publisher": {
       "@type": "Organization",
       "name": "Minerva#24809 Gen3",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://minerva.jnx03.xyz/assets/images/common/index/bnr.png"
+        "url": "https://gcminerva.co/assets/images/common/index/bnr.png"
       }
     },
     "potentialAction": {
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://minerva.jnx03.xyz/search?q={search_term_string}"
+        "urlTemplate": "https://gcminerva.co/search?q={search_term_string}"
       },
       "query-input": "required name=search_term_string"
     },
@@ -190,7 +191,7 @@ export default function RootLayout({
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://minerva.jnx03.xyz"
+        "item": "https://gcminerva.co"
       }
     ]
   };

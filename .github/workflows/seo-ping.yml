@@ -1,0 +1,90 @@
+name: SEO Ping - Search Engines
+
+on:
+  # Run every Sunday at midnight UTC
+  schedule:
+    - cron: '0 0 * * 0'
+
+  # Run after every deployment to main
+  push:
+    branches:
+      - main
+
+  # Allow manual trigger from Actions tab
+  workflow_dispatch:
+
+jobs:
+  ping-search-engines:
+    runs-on: ubuntu-latest
+    name: Ping Search Engines
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Wait for deployment
+        if: github.event_name == 'push'
+        run: |
+          echo "Waiting 60 seconds for deployment to complete..."
+          sleep 60
+
+      - name: Ping search engines
+        run: node scripts/ping-seo.js
+        continue-on-error: true
+
+      - name: Ping via API
+        run: |
+          echo "Pinging via internal API..."
+          curl -X POST https://gcminerva.co/api/ping-search-engines \
+            -H "Content-Type: application/json" \
+            -w "\nStatus: %{http_code}\n"
+        continue-on-error: true
+
+      - name: Cross-site network boost
+        run: |
+          echo "Boosting entire site network (gcminerva.co, dekport.com, jnx03.xyz)..."
+          curl -X POST https://gcminerva.co/api/cross-site-boost \
+            -H "Content-Type: application/json" \
+            -w "\nStatus: %{http_code}\n"
+        continue-on-error: true
+
+      - name: Ping dekport.com sitemap
+        run: |
+          echo "Pinging dekport.com to Google and Bing..."
+          curl "https://www.google.com/ping?sitemap=https://dekport.com/sitemap.xml" || true
+          curl "https://www.bing.com/ping?sitemap=https://dekport.com/sitemap.xml" || true
+        continue-on-error: true
+
+      - name: Ping jnx03.xyz sitemap
+        run: |
+          echo "Pinging jnx03.xyz to Google and Bing..."
+          curl "https://www.google.com/ping?sitemap=https://jnx03.xyz/sitemap.xml" || true
+          curl "https://www.bing.com/ping?sitemap=https://jnx03.xyz/sitemap.xml" || true
+        continue-on-error: true
+
+      - name: Validate sitemaps
+        run: |
+          echo "Validating XML sitemap..."
+          curl -I https://gcminerva.co/sitemap.xml
+          echo ""
+          echo "Validating RSS feed..."
+          curl -I https://gcminerva.co/rss.xml
+          echo ""
+          echo "Validating Atom feed..."
+          curl -I https://gcminerva.co/atom.xml
+          echo ""
+          echo "Validating JSON feed..."
+          curl -I https://gcminerva.co/feed.json
+        continue-on-error: true
+
+      - name: Summary
+        run: |
+          echo "✅ SEO ping workflow completed"
+          echo "🔍 Check the logs above for detailed results"
+          echo "📊 Monitor search console for indexing updates"

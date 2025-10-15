@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 
 const INDEXNOW_KEY = 'ff6f9e628e87475aae6ba4df5250e791'
-const BASE_URL = 'https://minerva.jnx03.xyz'
+const BASE_URL = 'https://gcminerva.co'
 
 export async function POST(request: NextRequest) {
   try {
@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
 
     // Submit to IndexNow
     const payload = {
-      host: 'minerva.jnx03.xyz',
+      host: 'gcminerva.co',
       key: INDEXNOW_KEY,
       keyLocation: `${BASE_URL}/${INDEXNOW_KEY}.txt`,
       urlList: formattedUrls
