@@ -88,7 +88,7 @@ async function checkSiteHealth(url: string) {
     })
     return {
       accessible: response.ok,
-      statusCode: response.statusCode,
+      statusCode: response.status,
     }
   } catch (e) {
     return {
