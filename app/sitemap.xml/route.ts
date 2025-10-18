@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 
 export async function GET() {
-  const baseUrl = 'https://minerva.jnx03.xyz'
+  const baseUrl = 'https://gcminerva.co'
   const currentDate = new Date().toISOString()
 
   // Define all pages with their priorities and change frequencies

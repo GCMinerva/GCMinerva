@@ -6,11 +6,15 @@ export const metadata: Metadata = {
   keywords: ['FTC team', 'robotics team', 'FIRST Tech Challenge', 'about Minerva', 'robotics members', 'GC Gen 14'],
   alternates: {
     canonical: '/about',
+    languages: {
+      'en': '/about',
+      'th': '/th/about',
+    },
   },
   openGraph: {
     title: 'About | Minerva#24809 Gen3 | FTC',
     description: 'Learn about Minerva#24809 Gen3, our FTC robotics team journey, and our talented members specializing in coding, design, CAD, and building.',
-    url: 'https://gcminerva.com/about',
+    url: 'https://gcminerva.co/about',
     siteName: 'Minerva#24809 Gen3 | FTC',
     images: [
       {

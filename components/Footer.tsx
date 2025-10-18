@@ -138,6 +138,16 @@ export default function Footer() {
                   PRIVACY POLICY
                 </a>
               </li>
+              <li className="link">
+                <a href="https://jnx03.xyz" target="_blank" rel="noopener noreferrer">
+                  JNX03.XYZ
+                </a>
+              </li>
+              <li className="link">
+                <a href="https://dekport.com" target="_blank" rel="noopener noreferrer">
+                  DEKPORT.COM
+                </a>
+              </li>
               <li className="gc">
                 <a href="https://www.facebook.com/p/Gifted-Computer-PLUS-100057159531628/" target="_blank" rel="noopener">
                   <Image

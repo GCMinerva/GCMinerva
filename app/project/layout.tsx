@@ -6,11 +6,15 @@ export const metadata: Metadata = {
   keywords: ['robotics projects', 'FTC projects', 'VingVing Robot', 'autonomous navigation', 'computer vision', 'data visualization', 'open source robotics'],
   alternates: {
     canonical: '/project',
+    languages: {
+      'en': '/project',
+      'th': '/th/project',
+    },
   },
   openGraph: {
     title: 'Projects | Minerva#24809 Gen3 | FTC',
     description: 'Explore Minerva#24809 Gen3 robotics projects including VingVing Robot and VingVing Visualizer. Innovation through robotics and technology.',
-    url: 'https://gcminerva.com/project',
+    url: 'https://gcminerva.co/project',
     siteName: 'Minerva#24809 Gen3 | FTC',
     images: [
       {

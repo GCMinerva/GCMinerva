@@ -6,11 +6,15 @@ export const metadata: Metadata = {
   keywords: ['contact', 'FTC contact', 'robotics team contact', 'collaborate', 'sponsorship inquiries'],
   alternates: {
     canonical: '/contact',
+    languages: {
+      'en': '/contact',
+      'th': '/th/contact',
+    },
   },
   openGraph: {
     title: 'Contact | Minerva#24809 Gen3 | FTC',
     description: 'Get in touch with Minerva#24809 Gen3 FTC robotics team for collaborations and inquiries.',
-    url: 'https://gcminerva.com/contact',
+    url: 'https://gcminerva.co/contact',
     siteName: 'Minerva#24809 Gen3 | FTC',
     images: [
       {

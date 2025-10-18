@@ -6,11 +6,15 @@ export const metadata: Metadata = {
   keywords: ['sponsors', 'FTC sponsors', 'robotics sponsors', 'team partners', 'STEM support', 'sponsor robotics'],
   alternates: {
     canonical: '/sponser',
+    languages: {
+      'en': '/sponser',
+      'th': '/th/sponser',
+    },
   },
   openGraph: {
     title: 'Sponsors | Minerva#24809 Gen3 | FTC',
     description: 'Meet the sponsors and partners supporting Minerva#24809 Gen3 FTC robotics team.',
-    url: 'https://gcminerva.com/sponser',
+    url: 'https://gcminerva.co/sponser',
     siteName: 'Minerva#24809 Gen3 | FTC',
     images: [
       {

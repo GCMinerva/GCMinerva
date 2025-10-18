@@ -6,11 +6,15 @@ export const metadata: Metadata = {
   keywords: ['social media', 'FTC social', 'robotics team social', 'follow Minerva', 'team updates'],
   alternates: {
     canonical: '/social',
+    languages: {
+      'en': '/social',
+      'th': '/th/social',
+    },
   },
   openGraph: {
     title: 'Social | Minerva#24809 Gen3 | FTC',
     description: 'Connect with Minerva#24809 Gen3 on social media and follow our robotics journey.',
-    url: 'https://gcminerva.com/social',
+    url: 'https://gcminerva.co/social',
     siteName: 'Minerva#24809 Gen3 | FTC',
     images: [
       {
