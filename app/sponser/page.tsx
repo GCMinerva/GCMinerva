@@ -84,9 +84,9 @@ export default function SponserPage() {
                 opacity: 0.9,
                 transition: 'all 0.3s ease'
               }}>
-                <img src="/assets/images/common/icon_prc.png" alt="PRC Logo" style={{
-                  width: '100%',
-                  height: '100%',
+                <img src="/assets/images/common/icon_luca.png" alt="PRC Logo" style={{
+                  width: '200%',
+                  height: '200%',
                   objectFit: 'contain'
                 }} />
               </div>
@@ -96,9 +96,9 @@ export default function SponserPage() {
                 opacity: 0.9,
                 transition: 'all 0.3s ease'
               }}>
-                <img src="/assets/images/common/icon_gc.png" alt="GC Logo" style={{
-                  width: '100%',
-                  height: '100%',
+                <img src="/assets/images/common/icon_sm.png" alt="GC Logo" style={{
+                  width: '400%',
+                  height: '400%',
                   objectFit: 'contain'
                 }} />
               </div>
