@@ -214,7 +214,7 @@ export default function MemberPage() {
                         <dd className="ja">???</dd>
                       </dl>
                     </div>
-                    <div className="chara-image"><img src="/assets/images/common/character/thumb-dk-2.png" alt="" decoding="async" /></div>
+                    <div className="chara-image"><img src="/assets/images/common/character/thumb-dk.png" alt="" decoding="async" /></div>
                     <div className="detail-info">
                       <div className="key-color"><span></span><span></span><span></span></div>
                       <p>：BUILD TEAM<br />　MEMBER</p>
@@ -244,7 +244,7 @@ export default function MemberPage() {
                         <dd className="ja">???</dd>
                       </dl>
                     </div>
-                    <div className="chara-image"><img src="/assets/images/common/character/thumb-dk-2.png" alt="" decoding="async" /></div>
+                    <div className="chara-image"><img src="/assets/images/common/character/thumb-dk.png" alt="" decoding="async" /></div>
                     <div className="detail-info">
                       <div className="key-color"><span></span><span></span><span></span></div>
                       <p>：CAD TEAM<br />　MEMBER</p>
@@ -312,7 +312,7 @@ export default function MemberPage() {
                         <dd className="ja">???</dd>
                       </dl>
                     </div>
-                    <div className="chara-image"><img src="/assets/images/common/character/thumb-dk-2.png" alt="" decoding="async" /></div>
+                    <div className="chara-image"><img src="/assets/images/common/character/thumb-dk.png" alt="" decoding="async" /></div>
                     <div className="detail-info">
                       <div className="key-color"><span></span><span></span><span></span></div>
                       <p>：PROGRAMMING TEAM<br />　MEMBER</p>
@@ -350,7 +350,7 @@ export default function MemberPage() {
                         <dd className="ja">???</dd>
                       </dl>
                     </div>
-                    <div className="chara-image"><img src="/assets/images/common/character/thumb-dk-2.png" alt="" decoding="async" /></div>
+                    <div className="chara-image"><img src="/assets/images/common/character/thumb-dk.png" alt="" decoding="async" /></div>
                     <div className="detail-info">
                       <div className="key-color"><span></span><span></span><span></span></div>
                       <p>：PROGRAMMING TEAM<br />　MEMBER</p>
