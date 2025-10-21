@@ -70,83 +70,102 @@ export default function SponserPage() {
           </div>
 
           <div className="sw-Lower-Wrapper story-Wrapper">
+            <style jsx>{`
+              .logo-link {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 250px;
+                height: 250px;
+                opacity: 0.85;
+                transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                transform: translateY(0);
+                filter: grayscale(0%);
+                position: relative;
+              }
+
+              .logo-link::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 0;
+                height: 0;
+                border-radius: 50%;
+                background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+                transform: translate(-50%, -50%);
+                transition: all 0.5s ease;
+                pointer-events: none;
+              }
+
+              .logo-link:hover {
+                opacity: 1;
+                transform: translateY(-10px) scale(1.05);
+                filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+              }
+
+              .logo-link:hover::before {
+                width: 300px;
+                height: 300px;
+              }
+
+              .logo-link img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+              }
+
+              .logo-link:hover img {
+                transform: rotate(5deg) scale(1.1);
+              }
+
+              @keyframes float {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-15px); }
+              }
+
+              .logo-link:nth-child(1) {
+                animation: float 3s ease-in-out infinite;
+                animation-delay: 0s;
+              }
+
+              .logo-link:nth-child(2) {
+                animation: float 3s ease-in-out infinite;
+                animation-delay: 0.3s;
+              }
+
+              .logo-link:nth-child(3) {
+                animation: float 3s ease-in-out infinite;
+                animation-delay: 0.6s;
+              }
+            `}</style>
             <div className="sponsor-logos-section js-Animation fade-Animation" style={{
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
-              gap: '2rem',
-              padding: '3rem 2rem 2rem',
+              gap: '3rem',
+              padding: '3rem 2rem',
               marginBottom: '2rem'
             }}>
-              <div className="logo-container" style={{
-                width: '100px',
-                height: '100px',
-                opacity: 0.9,
-                transition: 'all 0.3s ease'
-              }}>
-                <img src="/assets/images/common/icon_luca.png" alt="PRC Logo" style={{
-                  width: '200%',
-                  height: '200%',
-                  objectFit: 'contain'
-                }} />
-              </div>
-              <div className="logo-container" style={{
-                width: '200px',
-                height: '200px',
-                opacity: 0.9,
-                transition: 'all 0.3s ease'
-              }}>
-                <img src="/assets/images/common/icon_sm.png" alt="GC Logo" style={{
-                  width: '400%',
-                  height: '400%',
-                  objectFit: 'contain'
-                }} />
-              </div>
-            </div>
-
-            <div className="story-List-Wrapper js-Animation">
-              <ul className="story-Anchor-List">
-                <li className="list"><a href="#sponsor">SPONSOR</a></li>
-              </ul>
-            </div>
-
-            {/* Sponsor Section */}
-            <div className="story-detail-container js-Animation" id="sponsor">
-              <div className="detail-Inner"><span className="deco"></span><span className="deco"></span>
-                <div className="contents">
-                  <div className="ttl-Wrapper">
-                    <p className="number">#01</p>
-                    <h1 className="ttl">Become a Sponsor</h1>
-                  </div>
-                  <div className="body">
-                    <p>
-                      We are actively seeking sponsors to support Minerva#24809 Gen3 in our robotics journey. Your sponsorship helps us develop cutting-edge technology, participate in competitions, and provide hands-on STEM education to our team members.
-                    </p>
-
-                    <p style={{ marginTop: '2rem' }}>
-                      Partner with us to build the next generation of engineers and innovators. We welcome sponsorships of all sizes and are happy to discuss how we can create a mutually beneficial partnership.
-                    </p>
-
-                    <p className="staff" style={{ marginTop: '3rem', textAlign: 'center' }}>
-                      <a href="/contact" style={{
-                        display: 'inline-block',
-                        padding: '1rem 3rem',
-                        background: 'linear-gradient(135deg, #00d1ff 0%, #003350 100%)',
-                        color: 'white',
-                        fontFamily: 'Oxanium, cursive',
-                        fontSize: 'clamp(1.1rem, 2vw, 1.4rem)',
-                        fontWeight: 700,
-                        textDecoration: 'none',
-                        borderRadius: '50px',
-                        letterSpacing: '0.05em',
-                        transition: 'all 0.3s ease',
-                        boxShadow: '0 4px 20px rgba(0, 209, 255, 0.3)'
-                      }}>
-                        CONTACT US
-                      </a>
-                    </p>
-                  </div>
-                </div>
+              <a
+                href="https://www.smchem.co.th/TH/home.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="logo-link"
+              >
+                <img src="/assets/images/common/icon_sm.png" alt="SM Chemical Logo" />
+              </a>
+              <a
+                href="https://www.lucalearningspace.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="logo-link"
+              >
+                <img src="/assets/images/common/icon_luca.png" alt="Luca Learning Space Logo" />
+              </a>
+              <div className="logo-link" style={{ cursor: 'default', animation: 'float 3s ease-in-out infinite', animationDelay: '0.6s' }}>
+                <img src="/assets/images/common/logo_whicia.png" alt="Whicia Logo" />
               </div>
             </div>
           </div>

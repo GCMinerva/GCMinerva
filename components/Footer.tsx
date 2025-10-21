@@ -148,7 +148,7 @@ export default function Footer() {
                   DEKPORT.COM
                 </a>
               </li>
-              <li className="gc">
+              <li className="sponsor-logo" style={{ display: 'none' }}>
                 <a href="https://www.facebook.com/p/Gifted-Computer-PLUS-100057159531628/" target="_blank" rel="noopener">
                   <Image
                     src="/assets/images/common/icon_gc.png"
@@ -159,7 +159,7 @@ export default function Footer() {
                   />
                 </a>
               </li>
-              <li className="prc">
+              <li className="sponsor-logo" style={{ display: 'none' }}>
                 <a href="https://www.prc.ac.th/" target="_blank" rel="noopener">
                   <Image
                     src="/assets/images/common/icon_prc.png"
@@ -169,6 +169,37 @@ export default function Footer() {
                     loading="lazy"
                   />
                 </a>
+              </li>
+              <li className="sponsor-logo sm">
+                <a href="https://www.smchem.co.th/TH/home.html" target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src="/assets/images/common/icon_sm.png"
+                    alt="SM Chemical"
+                    width={60}
+                    height={60}
+                    loading="lazy"
+                  />
+                </a>
+              </li>
+              <li className="sponsor-logo luca">
+                <a href="https://www.lucalearningspace.com/" target="_blank" rel="noopener noreferrer">
+                  <Image
+                    src="/assets/images/common/icon_luca.png"
+                    alt="Luca Learning Space"
+                    width={60}
+                    height={60}
+                    loading="lazy"
+                  />
+                </a>
+              </li>
+              <li className="sponsor-logo whicia">
+                <Image
+                  src="/assets/images/common/logo_whicia.png"
+                  alt="Whicia"
+                  width={60}
+                  height={60}
+                  loading="lazy"
+                />
               </li>
             </ul>
           </div>
