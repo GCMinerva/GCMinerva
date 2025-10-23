@@ -72,7 +72,18 @@ export default function ProjectPage() {
       description: 'A real-time data visualization tool designed to monitor and analyze robot performance metrics. Features live telemetry display, historical data analysis, and customizable dashboards for debugging and optimization.',
       technologies: ['Python', 'Data Visualization', 'Real-time Processing', 'UI/UX'],
       github: 'https://github.com/JNX03/PedroVisualizer',
-      image: null,
+      image: '/assets/images/common/index/bnr3.png', //null for not showing image
+      status: 'Active Development'
+    },
+    {
+      id: 3,
+      title: 'MeltDown Dashhh',
+      year: '2025',
+      description: 'A comprehensive FTC web dashboard for real-time robot monitoring and control. Features live telemetry streaming, match analytics, autonomous path visualization, and team management tools for competition preparation and strategy planning.',
+      technologies: ['Next.js', 'React', 'WebSocket', 'TypeScript', 'Real-time Data'],
+      github: 'https://github.com/GCMinerva/MeltDownDashhh',
+      website: 'https://meltdown.gcminerva.co/',
+      image: '/assets/images/common/index/bnr2.png',
       status: 'Active Development'
     }
   ];
@@ -163,8 +174,8 @@ export default function ProjectPage() {
                           ))}
                         </div>
 
-                        {project.github && (
-                          <div className="project-links">
+                        <div className="project-links">
+                          {project.github && (
                             <a
                               href={project.github}
                               target="_blank"
@@ -176,8 +187,22 @@ export default function ProjectPage() {
                               </svg>
                               View on GitHub
                             </a>
-                          </div>
-                        )}
+                          )}
+                          {project.website && (
+                            <a
+                              href={project.website}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="github-link"
+                              style={{ marginLeft: project.github ? '1rem' : '0' }}
+                            >
+                              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm9.5 12c0 1.194-.232 2.333-.654 3.379l-4.027-11.034c.758.754 1.49 1.589 2.117 2.476C20.478 8.443 21.5 10.106 21.5 12zm-9.5 9.5c-1.222 0-2.386-.233-3.465-.634l3.678-10.688 3.767 10.316c.025.061.053.119.084.176-1.265.525-2.647.83-4.064.83zM2.5 12c0-1.222.233-2.386.634-3.465l3.678 10.688-3.767-10.316c-.025-.061-.053-.119-.084-.176C2.536 10.265 2.5 11.118 2.5 12zm7.464-7.634C10.986 4.133 11.977 4 13 4c1.39 0 2.658.42 3.732 1.134L13.5 14.5 9.964 4.366zM18.5 7c-.916-1.333-2.167-2.417-3.635-3.098l3.533 9.682L18.5 7z"/>
+                              </svg>
+                              Visit Website
+                            </a>
+                          )}
+                        </div>
                       </div>
                     </div>
                   </div>

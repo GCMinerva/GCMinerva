@@ -197,6 +197,17 @@ export default function KeyVisual() {
                 />
               </a>
             </SplideSlide>
+            <SplideSlide>
+              <a href="https://meltdown.gcminerva.co/" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/assets/images/common/index/bnr3.png"
+                  alt="VingVisRobot"
+                  width={300}
+                  height={200}
+                  loading="lazy"
+                />
+              </a>
+            </SplideSlide>
           </Splide>
         </div>
 
