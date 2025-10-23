@@ -126,6 +126,66 @@ export default function Footer() {
                   </a>
                 </li>
               </ul>
+              <div style={{ marginTop: '2rem' }}>
+                <p className="txt" style={{ marginBottom: '1rem' }}>OUR SPONSORS</p>
+                <ul style={{
+                  display: 'flex',
+                  gap: '1.5rem',
+                  listStyle: 'none',
+                  padding: 0,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  flexWrap: 'wrap'
+                }}>
+                  <li className="sponsor-logo sm">
+                    <a href="https://www.smchem.co.th/TH/home.html" target="_blank" rel="noopener noreferrer" style={{
+                      display: 'block',
+                      transition: 'transform 0.3s ease, opacity 0.3s ease',
+                      opacity: 0.85
+                    }}>
+                      <Image
+                        src="/assets/images/common/icon_sm.png"
+                        alt="SM Chemical"
+                        width={60}
+                        height={60}
+                        loading="lazy"
+                        style={{ display: 'block' }}
+                      />
+                    </a>
+                  </li>
+                  <li className="sponsor-logo luca">
+                    <a href="https://www.lucalearningspace.com/" target="_blank" rel="noopener noreferrer" style={{
+                      display: 'block',
+                      transition: 'transform 0.3s ease, opacity 0.3s ease',
+                      opacity: 0.85
+                    }}>
+                      <Image
+                        src="/assets/images/common/icon_luca.png"
+                        alt="Luca Learning Space"
+                        width={60}
+                        height={60}
+                        loading="lazy"
+                        style={{ display: 'block' }}
+                      />
+                    </a>
+                  </li>
+                  <li className="sponsor-logo whicia">
+                    <div style={{
+                      display: 'block',
+                      opacity: 0.85
+                    }}>
+                      <Image
+                        src="/assets/images/common/logo_whicia.png"
+                        alt="Whicia"
+                        width={60}
+                        height={60}
+                        loading="lazy"
+                        style={{ display: 'block' }}
+                      />
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
             <ul className="link-container">
               <li className="link">
@@ -147,59 +207,6 @@ export default function Footer() {
                 <a href="https://dekport.com" target="_blank" rel="noopener noreferrer">
                   DEKPORT.COM
                 </a>
-              </li>
-              <li className="sponsor-logo" style={{ display: 'none' }}>
-                <a href="https://www.facebook.com/p/Gifted-Computer-PLUS-100057159531628/" target="_blank" rel="noopener">
-                  <Image
-                    src="/assets/images/common/icon_gc.png"
-                    alt="Gifted Computer PLUS"
-                    width={60}
-                    height={60}
-                    loading="lazy"
-                  />
-                </a>
-              </li>
-              <li className="sponsor-logo" style={{ display: 'none' }}>
-                <a href="https://www.prc.ac.th/" target="_blank" rel="noopener">
-                  <Image
-                    src="/assets/images/common/icon_prc.png"
-                    alt="PRC"
-                    width={60}
-                    height={60}
-                    loading="lazy"
-                  />
-                </a>
-              </li>
-              <li className="sponsor-logo sm">
-                <a href="https://www.smchem.co.th/TH/home.html" target="_blank" rel="noopener noreferrer">
-                  <Image
-                    src="/assets/images/common/icon_sm.png"
-                    alt="SM Chemical"
-                    width={60}
-                    height={60}
-                    loading="lazy"
-                  />
-                </a>
-              </li>
-              <li className="sponsor-logo luca">
-                <a href="https://www.lucalearningspace.com/" target="_blank" rel="noopener noreferrer">
-                  <Image
-                    src="/assets/images/common/icon_luca.png"
-                    alt="Luca Learning Space"
-                    width={60}
-                    height={60}
-                    loading="lazy"
-                  />
-                </a>
-              </li>
-              <li className="sponsor-logo whicia">
-                <Image
-                  src="/assets/images/common/logo_whicia.png"
-                  alt="Whicia"
-                  width={60}
-                  height={60}
-                  loading="lazy"
-                />
               </li>
             </ul>
           </div>
