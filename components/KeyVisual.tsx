@@ -162,33 +162,42 @@ export default function KeyVisual() {
 
         <div className="pickup-Wrapper">
           <p className="pickup-Ttl">PICK UP</p>
-          <div className="splide__arrows">
-            <div className="splide__arrow splide__arrow--prev">
-              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M-2.18557e-07 5L10 10L10 0L-2.18557e-07 5Z" fill="#00D1FF"></path>
-              </svg>
-            </div>
-            <div className="splide__arrow splide__arrow--next">
-              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M-2.18557e-07 5L10 10L10 0L-2.18557e-07 5Z" fill="#00D1FF" />
-              </svg>
-            </div>
-          </div>
-          <div className="splide__track">
-            <ul className="pickup_List splide__list">
-              <li className="pickup-Item splide__slide">
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                  <Image
-                    src="/assets/images/common/index/bnr.png"
-                    alt="Minerva#24809 Gen3 | FTC"
-                    width={300}
-                    height={200}
-                    loading="lazy"
-                  />
-                </a>
-              </li>
-            </ul>
-          </div>
+          <Splide
+            options={{
+              type: 'loop',
+              perPage: 1,
+              autoplay: true,
+              interval: 5000,
+              speed: 800,
+              pagination: true,
+              arrows: true,
+              gap: '1rem',
+            }}
+            aria-label="Pickup Banner Slider"
+          >
+            <SplideSlide>
+              <a href="https://vingdocs.gcminerva.co/" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/assets/images/common/index/bnr.png"
+                  alt="Minerva Documentation"
+                  width={300}
+                  height={200}
+                  loading="lazy"
+                />
+              </a>
+            </SplideSlide>
+            <SplideSlide>
+              <a href="/#" rel="noopener noreferrer">
+                <Image
+                  src="/assets/images/common/index/bnr2.png"
+                  alt="Minerva Banner 2"
+                  width={300}
+                  height={200}
+                  loading="lazy"
+                />
+              </a>
+            </SplideSlide>
+          </Splide>
         </div>
 
         <div className="share-Wrapper">
