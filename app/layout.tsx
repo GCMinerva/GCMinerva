@@ -109,9 +109,9 @@ export const metadata: Metadata = {
     images: ["/assets/images/common/index/bnr.png"],
   },
   icons: {
-    icon: "/assets/images/common/favicon.ico",
-    shortcut: "/assets/images/common/favicon.ico",
-    apple: "/assets/images/common/favicon.ico",
+    icon: "https://avatars.githubusercontent.com/u/232621126?s=400&u=7f242caf2bcf4f47fc29531b78ef38ad3f18c65a&v=4",
+    shortcut: "https://avatars.githubusercontent.com/u/232621126?s=400&u=7f242caf2bcf4f47fc29531b78ef38ad3f18c65a&v=4",
+    apple: "https://avatars.githubusercontent.com/u/232621126?s=400&u=7f242caf2bcf4f47fc29531b78ef38ad3f18c65a&v=4",
   },
   manifest: '/manifest.json',
   appleWebApp: {

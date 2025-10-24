@@ -11,8 +11,8 @@ export async function GET() {
     description:
       'Official JSON feed for Minerva#24809 Gen3 | FTC robotics team. Stay updated with our latest projects, achievements, and robotics journey.',
     language: 'en',
-    icon: `${baseUrl}/assets/images/common/favicon.ico`,
-    favicon: `${baseUrl}/assets/images/common/favicon.ico`,
+    icon: `${baseUrl}https://avatars.githubusercontent.com/u/232621126?s=400&u=7f242caf2bcf4f47fc29531b78ef38ad3f18c65a&v=4`,
+    favicon: `${baseUrl}https://avatars.githubusercontent.com/u/232621126?s=400&u=7f242caf2bcf4f47fc29531b78ef38ad3f18c65a&v=4`,
     authors: [
       {
         name: 'Minerva#24809 Gen3 Team',

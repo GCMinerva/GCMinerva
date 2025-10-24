@@ -11,7 +11,7 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: '#003350',
     icons: [
       {
-        src: '/assets/images/common/favicon.ico',
+        src: 'https://avatars.githubusercontent.com/u/232621126?s=400&u=7f242caf2bcf4f47fc29531b78ef38ad3f18c65a&v=4',
         sizes: 'any',
         type: 'image/x-icon',
       },
