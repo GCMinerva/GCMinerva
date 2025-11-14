@@ -10,8 +10,20 @@ export default function Header() {
   const [showErrorOverlay, setShowErrorOverlay] = useState(false);
 
   useEffect(() => {
-    // Auto-reload on error with visual feedback
-    const handleError = () => {
+    // Auto-reload only on critical errors, not React hydration errors
+    const handleError = (event: ErrorEvent) => {
+      // Ignore React errors and CSP errors
+      const message = event.message?.toLowerCase() || '';
+      if (
+        message.includes('hydration') ||
+        message.includes('minified react') ||
+        message.includes('content security policy') ||
+        message.includes('loading') ||
+        message.includes('removechild')
+      ) {
+        return;
+      }
+
       const hasReloaded = sessionStorage.getItem('error-reloaded');
       if (!hasReloaded) {
         sessionStorage.setItem('error-reloaded', 'true');
@@ -25,8 +37,8 @@ export default function Header() {
     };
 
     const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
+      // Only log, don't reload on promise rejections
       console.error('Unhandled promise rejection:', event.reason);
-      handleError();
     };
 
     window.addEventListener('error', handleError);
@@ -118,25 +130,25 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about/" aria-label="Learn about our team">ABOUT</Link>
+                  <Link href="/about" aria-label="Learn about our team">ABOUT</Link>
                 </li>
                 <li>
-                  <Link href="/member/" aria-label="Meet our team members">MEMBER</Link>
+                  <Link href="/member" aria-label="Meet our team members">MEMBER</Link>
                 </li>
                 <li>
-                  <Link href="/sponser/" aria-label="View our sponsors">SPONSER</Link>
+                  <Link href="/sponser" aria-label="View our sponsors">SPONSER</Link>
                 </li>
                 <li>
-                  <Link href="/project/" aria-label="Explore our projects">PROJECT</Link>
+                  <Link href="/project" aria-label="Explore our projects">PROJECT</Link>
                 </li>
                 <li>
-                  <Link href="/community/" aria-label="Join our community">COMMUNITY</Link>
+                  <Link href="/community" aria-label="Join our community">COMMUNITY</Link>
                 </li>
                 <li>
-                  <Link href="/social/" aria-label="Follow us on social media">SOCIAL</Link>
+                  <Link href="/social" aria-label="Follow us on social media">SOCIAL</Link>
                 </li>
                 <li>
-                  <Link href="/contact/" aria-label="Contact us">CONTACT</Link>
+                  <Link href="/contact" aria-label="Contact us">CONTACT</Link>
                 </li>
               </ul>
             </nav>

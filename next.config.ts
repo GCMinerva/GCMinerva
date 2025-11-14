@@ -3,10 +3,26 @@ import withPWA from "next-pwa";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  trailingSlash: false,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production' ? {
+      exclude: ['error', 'warn'],
+    } : false,
+  },
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['@splidejs/react-splide', 'gsap'],
+  },
   images: {
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+      },
+    ],
   },
   async headers() {
     return [
@@ -39,7 +55,7 @@ const nextConfig: NextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-src https://www.youtube.com https://www.googletagmanager.com;"
+            value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://cdn.jsdelivr.net https://googleads.g.doubleclick.net https://www.googleadservices.com https://vercel.live; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.google.com https://googleads.g.doubleclick.net https://www.googleadservices.com https://cdn.jsdelivr.net; frame-src https://www.youtube.com https://www.googletagmanager.com https://vercel.live;"
           },
         ],
       },
