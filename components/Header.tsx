@@ -118,25 +118,25 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about/" aria-label="Learn about our team">ABOUT</Link>
+                  <Link href="/about" aria-label="Learn about our team">ABOUT</Link>
                 </li>
                 <li>
-                  <Link href="/member/" aria-label="Meet our team members">MEMBER</Link>
+                  <Link href="/member" aria-label="Meet our team members">MEMBER</Link>
                 </li>
                 <li>
-                  <Link href="/sponser/" aria-label="View our sponsors">SPONSER</Link>
+                  <Link href="/sponser" aria-label="View our sponsors">SPONSER</Link>
                 </li>
                 <li>
-                  <Link href="/project/" aria-label="Explore our projects">PROJECT</Link>
+                  <Link href="/project" aria-label="Explore our projects">PROJECT</Link>
                 </li>
                 <li>
-                  <Link href="/community/" aria-label="Join our community">COMMUNITY</Link>
+                  <Link href="/community" aria-label="Join our community">COMMUNITY</Link>
                 </li>
                 <li>
-                  <Link href="/social/" aria-label="Follow us on social media">SOCIAL</Link>
+                  <Link href="/social" aria-label="Follow us on social media">SOCIAL</Link>
                 </li>
                 <li>
-                  <Link href="/contact/" aria-label="Contact us">CONTACT</Link>
+                  <Link href="/contact" aria-label="Contact us">CONTACT</Link>
                 </li>
               </ul>
             </nav>

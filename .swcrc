@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json.schemastore.org/swcrc",
+  "jsc": {
+    "parser": {
+      "syntax": "typescript",
+      "tsx": true,
+      "dynamicImport": true,
+      "decorators": false
+    },
+    "transform": {
+      "react": {
+        "runtime": "automatic",
+        "pragma": "React.createElement",
+        "pragmaFrag": "React.Fragment",
+        "throwIfNamespace": true,
+        "development": false,
+        "useBuiltins": true,
+        "refresh": false
+      },
+      "optimizer": {
+        "globals": {
+          "vars": {
+            "__DEBUG__": "false"
+          }
+        }
+      }
+    },
+    "target": "es2022",
+    "loose": false,
+    "externalHelpers": false,
+    "keepClassNames": false,
+    "minify": {
+      "compress": {
+        "arguments": true,
+        "arrows": true,
+        "booleans": true,
+        "collapse_vars": true,
+        "comparisons": true,
+        "computed_props": true,
+        "conditionals": true,
+        "dead_code": true,
+        "directives": true,
+        "drop_console": false,
+        "drop_debugger": true,
+        "evaluate": true,
+        "expression": true,
+        "hoist_funs": false,
+        "hoist_props": true,
+        "hoist_vars": false,
+        "if_return": true,
+        "join_vars": true,
+        "keep_classnames": false,
+        "keep_infinity": false,
+        "loops": true,
+        "negate_iife": true,
+        "properties": true,
+        "reduce_funcs": false,
+        "reduce_vars": true,
+        "sequences": true,
+        "side_effects": true,
+        "switches": true,
+        "typeofs": true,
+        "unused": true
+      },
+      "mangle": {
+        "toplevel": false,
+        "keep_classnames": false,
+        "keep_fnames": false,
+        "keep_private_props": false,
+        "safari10": false
+      }
+    }
+  },
+  "module": {
+    "type": "es6",
+    "strict": false,
+    "strictMode": true,
+    "lazy": false,
+    "noInterop": false,
+    "ignoreDynamic": false
+  },
+  "minify": true,
+  "isModule": true,
+  "env": {
+    "targets": {
+      "chrome": "90",
+      "firefox": "88",
+      "safari": "14",
+      "edge": "90"
+    },
+    "mode": "usage",
+    "coreJs": "3.33"
+  }
+}

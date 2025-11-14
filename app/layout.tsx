@@ -76,10 +76,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: 'https://gcminerva.co',
-    title: "Minerva#24809 Gen3 | FTC",
+    title: "Minerva#24809 Gen3 | FTC Robotics Team",
     siteName: "Minerva#24809 Gen3 | FTC",
     description: "Official website for Minerva#24809 Gen3 | FTC robotics team. Discover our journey in robotics, innovation, and technology.",
     images: [
+      {
+        url: "https://avatars.githubusercontent.com/u/232621126?s=1000",
+        width: 1000,
+        height: 1000,
+        alt: "Minerva#24809 Gen3 | FTC Team Logo",
+        type: "image/png",
+      },
       {
         url: "/assets/images/common/index/bnr.png",
         width: 1200,
@@ -104,14 +111,16 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Minerva#24809 Gen3 | FTC",
-    description: "Official website for Minerva#24809 Gen3 | FTC robotics team",
-    images: ["/assets/images/common/index/bnr.png"],
+    title: "Minerva#24809 Gen3 | FTC Robotics Team",
+    description: "Official website for Minerva#24809 Gen3 | FTC robotics team. Excellence in robotics, innovation, and STEM education.",
+    images: ["https://avatars.githubusercontent.com/u/232621126?s=1000"],
+    creator: "@gcminerva",
+    site: "@gcminerva",
   },
   icons: {
-    icon: "https://avatars.githubusercontent.com/u/232621126?s=400&u=7f242caf2bcf4f47fc29531b78ef38ad3f18c65a&v=4",
-    shortcut: "https://avatars.githubusercontent.com/u/232621126?s=400&u=7f242caf2bcf4f47fc29531b78ef38ad3f18c65a&v=4",
-    apple: "https://avatars.githubusercontent.com/u/232621126?s=400&u=7f242caf2bcf4f47fc29531b78ef38ad3f18c65a&v=4",
+    icon: "https://avatars.githubusercontent.com/u/232621126?s=1000",
+    shortcut: "https://avatars.githubusercontent.com/u/232621126?s=1000",
+    apple: "https://avatars.githubusercontent.com/u/232621126?s=1000",
   },
   manifest: '/manifest.json',
   appleWebApp: {
