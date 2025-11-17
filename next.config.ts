@@ -8,21 +8,42 @@ const nextConfig: NextConfig = {
     removeConsole: process.env.NODE_ENV === 'production' ? {
       exclude: ['error', 'warn'],
     } : false,
+    styledComponents: false,
+    emotion: false,
   },
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['@splidejs/react-splide', 'gsap'],
+    optimizePackageImports: ['@splidejs/react-splide', 'gsap', 'react', 'react-dom'],
+    webpackBuildWorker: true,
+    parallelServerBuildTraces: true,
+    parallelServerCompiles: true,
+  },
+  outputFileTracingIncludes: {
+    '/': ['./public/**/*'],
+  },
+  modularizeImports: {
+    '@splidejs/react-splide': {
+      transform: '@splidejs/react-splide/{{member}}',
+    },
   },
   images: {
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 31536000,
+    dangerouslyAllowSVG: false,
+    contentDispositionType: 'inline',
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'avatars.githubusercontent.com',
       },
     ],
+  },
+  onDemandEntries: {
+    maxInactiveAge: 60 * 1000,
+    pagesBufferLength: 5,
   },
   async headers() {
     return [
