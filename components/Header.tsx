@@ -130,6 +130,9 @@ export default function Header() {
                   <Link href="/project/" aria-label="Explore our projects">PROJECT</Link>
                 </li>
                 <li>
+                  <Link href="/stickers/" aria-label="View our stickers">STICKERS</Link>
+                </li>
+                <li>
                   <Link href="/community/" aria-label="Join our community">COMMUNITY</Link>
                 </li>
                 <li>
