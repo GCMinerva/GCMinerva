@@ -25,25 +25,25 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/about/">ABOUT</Link>
+                <Link href="/about">ABOUT</Link>
               </li>
               <li>
-                <Link href="/member/">MEMBER</Link>
+                <Link href="/member">MEMBER</Link>
               </li>
               <li>
-                <Link href="/sponser/">SPONSER</Link>
+                <Link href="/sponser">SPONSER</Link>
               </li>
               <li>
-                <Link href="/project/">PROJECT</Link>
+                <Link href="/project">PROJECT</Link>
               </li>
               <li>
-                <Link href="/community/">COMMUNITY</Link>
+                <Link href="/community">COMMUNITY</Link>
               </li>
               <li>
-                <Link href="/social/">SOCIAL</Link>
+                <Link href="/social">SOCIAL</Link>
               </li>
               <li>
-                <Link href="/contact/">CONTACT</Link>
+                <Link href="/contact">CONTACT</Link>
               </li>
             </ul>
           </div>

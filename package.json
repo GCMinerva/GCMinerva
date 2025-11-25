@@ -4,10 +4,12 @@
   "description": "Official website for Minerva#24809 Gen3 | FTC robotics team",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
+    "build:prod": "NODE_ENV=production next build",
     "start": "next start",
     "lint": "next lint",
+    "analyze": "ANALYZE=true next build",
     "seo:ping": "node scripts/ping-seo.js",
     "seo:network": "curl -X POST https://gcminerva.co/api/cross-site-boost",
     "seo:boost": "curl -X POST https://gcminerva.co/api/backlink-boost",
@@ -38,5 +40,11 @@
     "react-dom": "^19.2.0",
     "rss": "^1.2.2",
     "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.7.9",
+    "@swc/core": "^1.15.2",
+    "critters": "^0.0.23",
+    "sharp": "^0.34.5"
   }
 }
